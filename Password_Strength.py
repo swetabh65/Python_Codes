@@ -25,14 +25,14 @@ def check_password_strength(password: str) -> bool:
         return False
 
     if not re.search(r'[!@#$%^&*()_\-+=<>?/\\|{}\[\]~`]', password):
-        print("Password must contain at least one special character (e.g., !, @, #, $).")
+        print("Password must contain at least one special character (e.g., !, @, #, ^).")
         return False
 
     return True
 
 if __name__ == "__main__":
-    user_password = input("Enter a password to check its strength: ")
+    user_password = input("Enter a password to validate its strength: ")
     if check_password_strength(user_password):
-        print("✅ Your password is strong.")
+        print("The entered password is strong.")
     else:
-        print("⚠️  Please try again with a stronger password.")
+        print("Kindly try again with a stronger password.")
